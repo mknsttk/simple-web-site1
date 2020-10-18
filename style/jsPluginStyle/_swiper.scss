@@ -1,0 +1,17 @@
+.swiper-container {
+    max-width: 1024px;
+    margin-top: 4rem;
+    margin-right: auto;
+    margin-left: auto;
+
+    @media screen and (max-width:720px) {
+        margin-top: 2rem;
+    }
+}
+
+.swiper-slide > img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
