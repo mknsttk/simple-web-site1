@@ -1,0 +1,32 @@
+.ly_cont {
+    max-width: 1280px;
+    padding: 4rem 1rem;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.ly_cont.ly_cont__col {
+    display: flex;
+    justify-content: space-between;
+
+    @media screen and (max-width: 768px) {
+        flex-direction: column;
+    }
+}
+
+.ly_cont_main {
+    flex: 1;
+    margin-right: 2rem;
+
+    @media screen and (max-width:768px) {
+        margin-right: 0;
+    }
+}
+
+.ly_cont_side {
+    flex: 0 0 240px;
+
+    @media screen and (max-width:768px) {
+        padding-top: 4rem;
+    }
+}
