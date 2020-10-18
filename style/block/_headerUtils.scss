@@ -1,0 +1,107 @@
+.bl_headerUtils {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media screen and (max-width: 960px) {
+        justify-content: start;
+    }
+}
+
+.bl_headerUtils_logo {
+    > a {
+        color: $onPrimary;
+        font-size: 2rem;
+    }
+
+    @media screen and (max-width: 960px)  {
+        margin-left: .5rem;
+    }
+}
+    
+
+.bl_headerUtils_nav {
+    display: flex;
+}
+
+.bl_headerUtils_item {
+    flex: 1;
+    text-align: center;
+}
+
+.bl_headerUtils_link {
+    color: $onPrimary;
+    display: block;
+    padding: 1.25rem 1.5rem;
+    transition: .25s;
+    position: relative;
+}
+
+.bl_headerUtils_link.bl_headerUtils_link__arrow::after {
+    content: '';
+    margin-left: .5em;
+    height: .5em;
+    width: .5em;
+    border-right: 2px solid $onPrimary;
+    border-bottom: 2px solid $onPrimary;
+    position: absolute;
+    top: 42.5%;
+    transform: rotate(45deg);
+}
+
+.bl_headerUtils_link:focus,
+.bl_headerUtils_link:hover {
+    background-color: $primary-variant;
+}
+
+@media screen and (max-width: 960px) {
+    .bl_headerUtils_nav {
+        display: none;
+    }
+}
+
+//submenu
+
+.bl_headerUtils_subMenu {
+    display: none;
+}
+
+.bl_headerUtils_subMenu.is_open {
+    display: block;
+}
+
+.bl_subMenu_container {
+    position: absolute;
+    top: 4rem;
+    width: 240px;
+    height: auto;
+    background-color: $primary-variant;
+    border-bottom-left-radius: .5rem;
+    border-bottom-right-radius: .5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow:0 1px 2px rgba(0, 0, 0, .1);
+}
+
+.bl_subMenu_item {
+    :hover, :focus {
+        text-decoration: underline;
+    }
+
+    > a {
+        color: $onPrimary;
+        display: block;
+        padding: 1.25rem 1.5rem;
+    }
+}
+
+.bl_headerUtils_subMenu[aria-hidden='false'] .bl_subMenu_container {
+    animation: fadeIn 300ms ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}

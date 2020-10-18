@@ -1,0 +1,52 @@
+.bl_media {
+    display: flex;
+    //タイトル、テキストを天地中央にするか、上揃えにするか
+    align-items: center;
+
+    @media screen and (max-width: 720px) {
+        display: block;
+    }
+}
+
+.bl_media_imgWrapper {
+    flex: 0 1 27.58333%;
+    margin-right: 2rem;
+
+    > img {
+        width: 100%;
+    }
+
+    @media screen and (max-width: 720px) {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+}
+
+.bl_media_body {
+    flex: 1;
+
+    > *:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.bl_media_title {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+
+//ボタンつきのメディア
+
+.bl_media_txt {
+    margin-bottom: 2rem;
+}
+
+.bl_media .el_btn {
+    @media screen and (max-width:720px) {
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}

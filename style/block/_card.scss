@@ -1,0 +1,61 @@
+.bl_card {
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .1);
+}
+
+.bl_card_imgWrapper {
+    position: relative;
+    padding-top: 56.25%;
+    overflow: hidden;
+
+    > img {
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        transform: translateY(-50%);
+    }
+}
+
+.bl_card_body {
+    padding: 1rem;
+
+    > *:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.bl_card_title {
+    color: $onSurface;
+    margin-bottom: .25rem;
+}
+
+.bl_card_txt {
+    color: $onSurface;
+    font-size: .875rem;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+}
+
+//カードがリンクとなるパターン　a要素に.bl_cardクラスをつける
+a.bl_card {
+    display: block;
+    transition: .25s;
+}
+
+a.bl_card .bl_card_title,
+a.bl_card .bl_card_txt {
+    transition: .25s;
+}
+
+a.bl_card:focus,
+a.bl_card:hover {
+    opacity: .75;
+}
+
+a.bl_card:focus .bl_card_title,
+a.bl_card:hover .bl_card_title,
+a.bl_card:focus .bl_card_txt,
+a.bl_card:hover .bl_card_txt {
+    color: $onSurface;
+}

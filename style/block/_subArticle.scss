@@ -1,0 +1,52 @@
+.bl_subArticleUnit {
+    margin-top: 2rem;
+}
+
+.bl_subArticle {
+    display: flex;
+}
+
+.bl_subArticle + .bl_subArticle {
+    margin-top: 1rem;
+}
+
+.bl_subArticle_body {
+    margin-left: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.bl_subArticle_imgWrapper {
+    position: relative;
+}
+
+.bl_subArticle_budge {
+    position: absolute;
+    background-color: $secondary;
+    font-size: 0.875rem;
+    padding: 0.09375rem .5rem;
+    color: $onSecondary;
+}
+
+.bl_subArticle_date {
+    color: $onSurface-variant;
+    font-size: 0.75rem;
+    margin-top: -0.1875rem;
+}
+
+.bl_subArticle_title {
+    color: $onSurface;
+    font-size: 0.875rem;
+}
+
+a.bl_subArticle {
+    cursor: pointer;
+    transition: .25s;
+}
+
+a.bl_subArticle:hover, 
+a.bl_subArticle:focus {
+    opacity: 0.75;
+}
+
