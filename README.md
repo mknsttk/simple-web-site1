@@ -1,1 +1,2 @@
-# simple-web-site1
+# simple-web-site
+##使用技術
