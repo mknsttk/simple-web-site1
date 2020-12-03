@@ -1,4 +1,4 @@
-# simple-web-site
+# web-site
 
 ## 特徴
   - CSS設計（PRECSS）
